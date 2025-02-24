@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>mealTrackingApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+<style>
+  /* Ensure the font is loaded before using it */
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
+/*sunset image*/
+h1, h3, .description, .collapsible {
+  background-image: url('https://images.unsplash.com/photo-1496614932623-0a3a9743552e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Mzc2NTM0Mjh8&ixlib=rb-4.0.3&q=85');
+}
+
+h1 {
+  font-size: 45px; 
+}
+
+/*welcome font*/
+.welcome {
+  font-family: 'Sixtyfour Convergence', serif;
+}
+
+/*add grid background and font*/
+form, body { 
+  font-family: "Fantasy";
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+/*new stuff*/
+.collapsible {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: "Fantasy";
+  font-size: 30px;
+}
+
+/* new stuff*/
+.active, .collapsible:hover {
+  background-color: #ddd; 
+}
+
+/*new stuff*/
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/*background gradient*/
+body {
+  background-image: linear-gradient(to bottom, #FFFFCC, #FFCC66, #FFCCCC, #CC99CC, #9966FF);
+  margin-left: 25px;
+  margin-right: 25px; 
+}
+
+
+ul { 
+  background-color: white;
+  border: solid; 
+}
+
+li { 
+  font-size: 18px;
+  margin: 2px; 
+}
+
+/*change the form font and size*/
+.directions {
+  font-family: "Fantasy"; 
+  font-size: 22px; 
+}
+
+/*change save meald data button color*/
+.btn {
+  background-color: #CE93D8; 
+}
+
+
+/*change background color to codepen link at bottom*/ 
+#bottomLink, #wireframe {
+  background: white; 
+  border: dashed; 
+  border-width: 1px; 
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+Carly Copley
+14 January 2025
+-->
+
+<!-- TODO: update html title in head-->
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+  </style>
+</head>
+
+
+<center>
+  <br><br>
+  <h1 id="welcome" class="welcome"><strong>🦭Welcome to Meal Tracker🦭</strong></h1>
+  <h3 id="description"><em>Record your daily meals and keep track of your eating habits!</em></h3>
+  
+<!-- NEW CODE -->
+<button type="button" class="collapsible"><center>CLICK ME FOR INFORMATIVE LINKS</button>
+<div class="content">
+  <h4 id="whyTrackMeals" class="topLinks"><a href="https://muschealth.org/medical-services/weight-loss-surgery/wls/2024/01/exploring-the-benefits-of-tracking-food-intake" target="_blank">Why Track Your Meals?</a>
+    
+  <h4 id="mealInspo" class="topLinks"><a href="https://www.foodnetwork.com/healthy/packages/healthy-every-week/quick-and-simple/healthy-dinners-in-40-minutes-or-less" target="_blank">Meal Inspiration</a>
+    
+</div>
+<hr>
+</center>
+  
+<!-- input new meal log -->
+<form>
+  
+  <label for="dateLog" class="directions">Date:</label>
+  <input type="date" id="dateLog" placeholder="enter date">
+  <br>
+  
+  <label for="mealType" class="directions">Meal Type:</label><br>
+  <input type="text" id="mealType" name="mealType" value="enter your meal type">
+  <br>
+  
+  <label for="ate" class="directions">What did you eat for this meal?</label><br>
+  <textarea id="mealType" rows="4" cols="50">
+  </textarea>
+  <button id="saveMeal" class="btn btn-outline-primary">save meal data</button>
+</form>
+<br><hr>
+
+<!-- seal GIFs -->
+<img alt="sealGif1" src='https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGJ6NTFiZWx6NDV5enR6NnNoZmQwczNsajV1dWtubmd6dGtoYWRjZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13AK7klLVE3h4Y/giphy.gif'>
+<img alt="sealGif2" src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmgydjByb3FqaXZ5YzBncml0Z3o2Y2o5MTk1aXkzZGVpZHRocnA5NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4FGsIFhXqhcqDfHO/giphy.gif'>
+<img alt="sealGif3" src='https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHYwZ3czMzRmbHZwNDl1Zzhzb2MyZjExeHVwMjN5ejcwdW9jd3J1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kc92InnqBYJKZpqXOt/giphy.gif'>
+<img alt="sealGif4" src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2NibmUwc2Nod3dzazF0ZHIyaXplYjg0OHF6OThpbzRmbGNzNHB0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1dWKmBSsRWCVM3ay8U/giphy.gif'>
+<br>
+<hr>
+
+<!-- list of saved meal stuff -->
+<body>    
+    <h2><strong>This is a list of my meals at </strong><a href="https://una.edu/" target="_blank">UNA:</a></h2>
+    
+<strong>12 January</strong>
+<ul id = "firstLog" class="listItem">
+  <li id = "breakfast">Breakfast: Ham, egg, and cheese sandwich</li>
+  <li>Lunch: n/a</li>
+  <li id>Dinner: 3 slices of pizza</li>
+  <li>Snack: Summer sausage and Babybel cheese</li>
+</ul>
+<strong>13 January</strong>
+  <ul id = "secondLog" class="listItem">
+    <li>Breakfast: Tater tots, sausage, egg, fruit, coffee</li>
+    <li>Lunch: Banana</li>
+    <li>Dinner: Moe's bowl</li> 
+</ul>
+<strong>14 January</strong>
+<ul id = "thirdLog" class="listItem">
+  <li>Breakfast: Potato wedges, waffle, oatmeal, coffee</li>
+  <li>Lunch: Blueberry muffin and salmon poke bowl</li>
+  <li>Dinner: Cookout burger and cheese curds</li>
+</ul> 
+</body>
+    
+<!--</body>--> 
+
+<p id="bottomLink">Link to the <a href="https://codepen.io/carlycopley/pen/GgKdYMe" target="_blank">original CodePen</a></p>
+  
+<p id="wireframe">Link to the <a href="https://github.com/carlycopley/mealAppWireframe/blob/main/mealAppWireframe.jpg?raw=true" target="_blank">wireframe</a>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+<script>
+  //make the save meal data button function
+$(document).ready(function(){
+  //code goes here 
+  
+  $("#saveMeal").on("click", function(){
+    // call meal type?\
+      let statusText = underConstruction("not ready");
+    // update the status
+      $("#saveMeal").text(statusText).prop("disabled", true);
+  
+     });
+  
+    // pass a status (ready or not ready) and get back a message for user
+    // rn, not ready
+    function underConstruction(status){
+ 
+      return "not yet ready";
+    };
+  }
+);
+
+//make the education link button functioning
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
