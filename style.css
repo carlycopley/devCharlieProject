@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+#footer {
+  height: 100px; 
+  width: px; 
+  background-color: purple; 
+  text-align: center; 
+}
+
+#easterEgg {
+  position: relative; 
+}
+
+#myNav, .card, footer {
+  font-family: "Play", serif;
+}
+
+.play-regular {
+  font-family: "Play", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.play-bold {
+  font-family: "Play", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.btn {
+  background-color: grey; 
+}
+
+.card {
+  text-align: center; 
+  margin: auto; 
+}
+
+.card-container {
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+  flex-wrap: wrap;
+}
