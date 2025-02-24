@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>dev-baker-project</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1 {
+  font-family: Tourney; 
+  font-size: 50px; 
+  padding-top: 15px; 
+  margin: auto;
+}
+
+#name, #description, #madeBy, #seals, #target, #wireframe, #target, #output {
+    text-align: center; 
+}
+
+#banner {
+  width: px; 
+  height: 165px;
+  background-color: #607D8B; 
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  margin: 10px; 
+}
+
+#wireframe {
+  font-family: monospace; 
+  height: 20px; 
+  width: px;
+  background-color: darkGrey; 
+}
+
+#target {
+  height: 150px;
+  border: dotted black; 
+}
+
+#description, #madeBy, #seals {
+  font-family: monospace; 
+  font-size: 20px; 
+}
+
+#seals {
+  transform: rotate(180deg); 
+}
+
+#tennisCourt {
+  height: 1200px; 
+  width: 600px; 
+  background-color: #336699; 
+  margin: auto; 
+  position: relative; 
+}
+
+#alleyLeft {
+  font-family: Tourney;
+  height: 776px; 
+  width: 45px; 
+  background-color: #339966;
+  border: solid white; 
+  position: relative; 
+  top: -1026px;  
+  left: 112px; 
+}
+
+#alleyRight {
+  font-family: Tourney;
+  height: 776px; 
+  width: 45px; 
+  background-color: #339966;
+  border: solid white; 
+  position: relative; 
+  top: -1802px;
+  left: 420px; 
+}
+
+#baseRectangleFront {
+  font-family: Tourney;
+  height: 180px;
+  width: 270px; 
+  background-color: #339966; 
+  border: solid white; 
+  position: relative; 
+  top: 174px; 
+  left: 155px; 
+}
+
+#adBox {
+  font-family: Tourney;
+  height: 420px;
+  width: 130.5px; 
+  background-color: #339966;
+  border: solid white; 
+  position: relative; 
+  top: 172px; 
+  left: 155px; 
+}
+
+#deuceBox {
+  font-family: Tourney;
+  height: 420px;
+  width: 135px; 
+  background-color: #339966;
+  border: solid white; 
+  position: relative; 
+  top: -248px; 
+  left: 285px; 
+}
+
+#baseRectangleBack {
+  font-family: Tourney;
+  height: 180px;
+  width: 270px; 
+  background-color: #339966; 
+  border: solid white; 
+  position: relative;
+  top: -250px;
+  left: 155px; 
+}
+  </style>
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+CIS376
+Carly Copley
+7 Febrauary 2025
+-->
+
+<!-- import the font -->
+<head><style>
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+</head>
+
+
+<title>Tennis Court</title>
+
+<!-- everything in the grey grid -->
+<div id="banner">
+  <h1 id="name">🦭TENNIS COURT🦭</h1> 
+  <div id="description">This is a bird's eye view of a tennis court.</div>
+  <div id="madeBy">Made by Carly Copley</div>
+  <div id="seals">🦭🦭🦭</div>
+</div>
+
+<!-- wireframe link -->
+<div id="wireframe">
+  <a href="https://github.com/carlycopley/devBakerProject/blob/main/devBakerWireframe.jpg?raw=true" target="_blank">
+    Link to my wireframe
+  </a>
+</div>
+    
+<br>
+
+<!-- show the coordinates of adBox -->
+<div id="target">
+  <p>Click the button to get the coordinates of adBox.</p>
+  <button onclick="getPoint()">Click me!</button>
+  <p id="output"></p>
+</div>
+    
+<br>
+    
+<!-- create tennis court container -->
+<div id="tennisCourt">
+  
+  <div id="baseRectangleFront">baseFront (draggable)</div> 
+  
+  <div id="adBox">adBox *click me</div> 
+  
+  <div id="deuceBox">deuceBox</div> 
+  
+  <div id="baseRectangleBack">baseBack</div> 
+  
+  <div id="alleyLeft">alleyLeft</div> 
+  
+  <div id="alleyRight">alleyRight</div> 
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bsjs/0.3.0/bsjs.min.js'></script><script  src="./script.js"></script>
+
+<script>
+  $( document ).ready(
+  function() {
+    console.log( "ready!" );
+
+    
+  $('#baseRectangleFront').draggable(); 
+    
+  $("#adBox").on('click', function(){
+    
+     $("#adBox").animate({left: '500px'});
+    
+  })
+  }
+);
+
+//move adBox when clicked
+$(document)
+  .on(
+    'click', 
+      (event)=> 
+      {
+        // alert(event.target.id); 
+        let $clicked = $('#'+event.target.id );  
+        // alert($clicked.position().top);
+        
+        console.log(
+          event.target.id, 
+          $('#'+event.target.id)
+          .position()
+          .left);
+       
+})
+
+//show the position of adbox 
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("adBox").addEventListener("click", getPoint);
+});
+
+function getPoint() {
+  let adBox = document.getElementById("adBox");
+  let output = document.getElementById("output");
+
+  if (!adBox) {
+    output.innerHTML = "Element not found!";
+    return;
+  }
+
+  let rect = adBox.getBoundingClientRect();
+
+  output.innerHTML =
+    "Screen X: " + rect.left + "px<br>" +
+    "Screen Y: " + rect.top + "px";
+}
+</script>
+
+</body>
+</html>
